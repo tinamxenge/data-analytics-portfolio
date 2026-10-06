@@ -83,4 +83,19 @@ Through this project, I practised:
 ## Project Outcome
 
 This project helped me develop practical experience with Tableau and gave me an opportunity to apply data analysis concepts to a realistic business scenario.
-End.
+
+## Visualizations
+
+1. Down Time Per Factory 
+
+![Down Time per Factory](screenshots/downtime-per-factory.png) 
+
+2. Down Time Per Device
+
+![Down Time per Device Type](screenshots/downtime-per-device-type.png)
+
+3. Interactive Dashboard
+
+![Interactive Dashboard](screenshots/tableau-dashboard.png)
+
+
