@@ -1,1 +1,86 @@
+## Overview
 
+This project was completed as part of a Forage Data Analytics Job Simulation.
+
+The project involved analysing machine and factory data using Tableau to identify patterns in machine health and potential downtime. 
+As well as which location the machines broke most often.
+
+This was my first completed data analytics project and I used it to practise data preparation, calculated fields, data visualisation, dashboards, and drawing business insights from data.
+
+## Tools Used
+
+* Tableau
+* Data visualisation
+* Calculated fields
+* Dashboard creation
+* Data analysis
+
+## Project Tasks
+
+ 1. Data Preparation
+
+I imported the provided dataset into Tableau and explored the available fields, including factory location, device type, and machine status.
+
+ 2. Calculated Field — Unhealthy
+
+I created a calculated field called `Unhealthy`.
+
+The calculation assigned 10 minutes of potential downtime to each record where the machine status was `Unhealthy`. The formula I used was as below.
+
+```text
+IF LOWER(TRIM([Status])) = "unhealthy" THEN 10
+ELSE 0
+END
+```
+
+I used `LOWER()` and `TRIM()` to make the calculation more reliable when working with text data.
+
+ 3. Down Time per Factory
+
+I created a bar chart showing potential downtime across factories in different locations.
+
+This allowed me to compare factories and identify locations with higher levels of potential downtime.
+
+4. Down Time per Device Type
+
+I created a second bar chart comparing potential downtime by device type.
+
+The analysis showed that:
+
+* LaserWelder recorded 480 minutes of potential downtime.
+* LaserCutter recorded 430 minutes of potential downtime.
+
+LaserWelder therefore had the highest potential downtime among the device types observed in this analysis.
+
+ 5. Interactive Dashboard
+
+I combined the two visualisations into an interactive Tableau dashboard.
+
+The factory chart was configured as a filter so that selecting a factory updates the device-type chart to show the relevant machines for that factory.
+
+## Key Insight
+
+The analysis indicated that LaserWelder and LaserCutter had notably higher potential downtime than other device types. 
+LaserWelder recorded 480 minutes (8 hours) of potential downtime, while LaserCutter recorded 430 minutes (7 hours 10 minutes).
+The location that the machines break the most was Osaka, Japan. 
+
+These device types may warrant closer monitoring or further investigation to understand the reasons behind their higher number of unhealthy records.
+
+## What I Learned
+
+Through this project, I practised:
+
+* Importing and exploring data in Tableau
+* Working with dimensions and measures
+* Creating calculated fields
+* Using conditional logic in Tableau
+* Creating bar charts
+* Building interactive dashboards
+* Using one visualisation as a filter
+* Interpreting data and identifying business insights
+* Communicating findings using data visualisations
+
+## Project Outcome
+
+This project helped me develop practical experience with Tableau and gave me an opportunity to apply data analysis concepts to a realistic business scenario.
+End.
